@@ -28,26 +28,26 @@ const Hero = () => {
     <>
       <Navbar />
 
-      <section className='relative min-h-screen' id='hero' ref={ref}>
-        <AnimatePresence mode='wait'>
+      <section className='relative min-h-screen ' id='hero' ref={ref}>
+        <AnimatePresence mode='wait' >
           {isInView && (
             <motion.div
               key="hero-component"
-              className='max-w-6xl mx-auto flex flex-col justify-center items-center h-screen px-4 md:px-0'
+              className='max-w-6xl mx-auto flex flex-col justify-center items-center h-screen px-4 md:px-0 '
               variants={containerVariants}
               initial='hidden'
               animate='visible'
               exit='exit'
             >
               <motion.h1
-                className='md:text-4xl text-2xl text-gray-600 font-semibold my-5'
+                className='md:text-4xl text-2xl text-gray-600 font-semibold my-5 z-10'
                 variants={itemVariants}
               >
                 We <span className='text-[#2dd5d0]'> Create</span> Experiences{' '}
               </motion.h1>
 
               <motion.div
-                className='flex flex-row items-center justify-center text-5xl text-gray-600 font-bold gap-4 text-center'
+                className='flex flex-row items-center justify-center z-10  text-gray-600 font-bold gap-4 text-center '
                 variants={itemVariants}
               >
                 <LayoutTextFlip
@@ -62,7 +62,7 @@ const Hero = () => {
               </motion.div>
 
               <motion.p
-                className='my-5 text-gray-500 text-center max-w-xl'
+                className='my-5 text-gray-500 text-center max-w-xl z-10'
                 variants={itemVariants}
               >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -70,7 +70,7 @@ const Hero = () => {
                 reiciendis ab quis. Eos, corporis qui?
               </motion.p>
 
-              <motion.div className='flex mt-5' variants={itemVariants}>
+              <motion.div className='flex mt-5 z-10' variants={itemVariants}>
                 <button className='bg-white flex items-center gap-4 text-[#2dd5d0] px-4 py-2 shadow-lg  rounded-4xl hover:bg-[#2dd5d0]/20 transition'>
                   Enquiry <LuArrowRight/>
                 </button>
@@ -79,9 +79,9 @@ const Hero = () => {
           )}
         </AnimatePresence>
 
-        <div className='absolute top-0 left-0 overflow-hidden'>
+        <div className='absolute top-0 left-0 overflow-hidden -z-0'>
           <motion.img
-            className='w-full h-auto origin-top-left transform scale-110 lg:w-auto lg:mx-auto lg:object-cover lg:scale-60 opacity-50'
+            className='w-full h-80  opacity-50'
             src={Bg}
             alt='bg'
             initial={{ opacity: 0, scale: 1.1 }}
