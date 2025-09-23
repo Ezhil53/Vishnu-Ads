@@ -49,7 +49,7 @@ const Process = () => {
             <img
               src={S3}
               alt='startup template'
-              className=' w-60 rounded-lg object-fit h-auto '
+              className=' w-60 rounded-lg object-fit h-auto invert'
             />
           </div>
         </div>
