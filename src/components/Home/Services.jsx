@@ -1,5 +1,5 @@
 import React from 'react'
-import FeaturesSectionDemo from './ui/features-section-demo-2'
+import FeaturesSectionDemo from '../ui/features-section-demo-2'
 import { motion } from 'framer-motion'
 
 const Services = () => {

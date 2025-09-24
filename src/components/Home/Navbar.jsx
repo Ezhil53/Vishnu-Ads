@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
-import Logo from '../assets/images/vishnu_ads_logo.png'
+import { Link } from 'react-router-dom'
+import Logo from '../../assets/images/vishnu_ads_logo.png'
 import { LuAlignJustify } from 'react-icons/lu'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className=' md:w-[80%] w-full backdrop-blur-lg border-2 shadow-lg z-50  md:my-4 md:rounded-xl  fixed md:top-3 md:left-[10%] '>
-      
+    <nav className='  w-full backdrop-blur-lg border-b-2  shadow-lg z-50    fixed  '>
       <div className='max-w-7xl mx-auto px-6 py-3 grid grid-cols-4 '>
-        <div className='w-100 h-10 '>
+        <div className='w-100 h-12 '>
           <img src={Logo} alt='logo' className='w-ful h-full object-cover' />
         </div>
 
@@ -50,13 +50,19 @@ const Navbar = () => {
             ${isOpen ? 'max-h-96 bg-green-50' : 'max-h-0 overflow-hidden'}
           `}
           >
-            {['Home', 'About', 'Services', 'Contact'].map(item => (
-              <li
-                key={item}
+            {[
+              { name: 'Home', li: '/' },
+              { name: 'About', li: '/about' },
+              { name: 'Services', li: '/services' },
+              { name: 'Contact', li: '/contact' }
+            ].map((item, id) => (
+              <Link
+                to={item.li}
+                key={id}
                 className='text-black/70 px-6 py-3 md:p-0 font-semibold hover:text-violet-400 cursor-pointer transition'
               >
-                {item}
-              </li>
+                {item.name}
+              </Link>
             ))}
           </ul>
         </div>
@@ -66,7 +72,6 @@ const Navbar = () => {
             Get Quote
           </button>
         </div>
-
       </div>
     </nav>
   )

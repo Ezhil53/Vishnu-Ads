@@ -1,8 +1,9 @@
 import React from 'react'
-import Logo from '../assets/images/vishnu_ads_logo.png'
-import { FaLinkedin,FaInstagram, FaFacebookSquare, FaPinterestSquare, FaYoutube } from "react-icons/fa"
+import Logo from '../../assets/images/vishnu_ads_logo.png'
+import { FaLinkedin,FaInstagram, FaFacebookSquare, FaPinterestSquare } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6";
 import { LuMapPin, LuPhone, LuMail } from 'react-icons/lu'
+import { TbBrandYoutube } from "react-icons/tb";
 
 
 const Footer = () => {
@@ -29,7 +30,7 @@ const Footer = () => {
             <div className="md:grid grid-cols-3 flex md:gap-7 gap-4 px-5 ">
               <a href="#" className='hover:text-pink-400 hover:scale-125 duration-300'> <FaInstagram size={34}/></a>  
               <a href="#" className='hover:text-blue-700 hover:scale-125 duration-300'> <FaFacebookSquare size={34} /> </a> 
-              <a href="#" className='hover:text-red-600 hover:scale-125 duration-300'> <FaYoutube size={36}/></a>  
+              <a href="#" className='hover:text-red-600 hover:scale-125 duration-300'> <TbBrandYoutube size={36} /></a>  
               <a href="#" className='hover:text-red-500 hover:scale-125 duration-300'> <FaPinterestSquare size={34}/> </a> 
               <a href="#" className='hover:text-black hover:scale-125 duration-300'> <FaXTwitter size={30}/></a> 
               <a href="#" className='hover:text-blue-500 hover:scale-125 duration-300'> <FaLinkedin size={34}/></a>  

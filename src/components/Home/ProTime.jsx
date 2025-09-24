@@ -37,9 +37,9 @@ const ProTime = () => {
 
   return (
     
-    <div className='relative w-full overflow-hidden h-screen  bg-gradient-to-l from-green-50 via-white to-violet-100'>
+    <div className='relative w-full overflow-hidden md:h-screen md:py-0 py-20 bg-gradient-to-l from-green-50 via-white to-violet-100'>
       
-      <h1 className='text-4xl font-semibold text-gray-600 text-left mt-15 max-w-5xl mx-auto'>Our Process</h1>
+      <h1 className='text-4xl font-semibold text-gray-600 text-center md:text-left mt-15 max-w-5xl mx-auto'>Our Process</h1>
       <div className="flex items-end">
       <ArcTimeline
         data={data}

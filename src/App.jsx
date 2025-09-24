@@ -1,27 +1,19 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Hero from './components/Hero'
-import Services from './components/Services'
-import Process from './components/Process'
-import Stats from './components/Stats'
-import About from './components/About'
-import Clients from './components/Clients'
-import Footer from './components/Footer'
+import Home from './pages/Home'
+import About from './pages/About'
 
-import ProTime from './components/ProTime'
 
 function App () {
   return (
     <>
-      <Hero />
-      <Services/>
-      <Stats/>
-      <About/>
-      <Process/>
-      <Clients/>
-      <ProTime/>
-      <Footer/>
-      
+      <BrowserRouter>
+       <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
+       </Routes>
+      </BrowserRouter>
     </>
   )
 }

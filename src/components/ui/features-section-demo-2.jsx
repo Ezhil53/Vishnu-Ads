@@ -13,47 +13,47 @@ import {
 export default function FeaturesSectionDemo() {
   const features = [
     {
-      title: "Built for developers",
+      title: "Business Setup & Strategy",
       description:
         "Built for engineers, developers, dreamers, thinkers and doers.",
       icon: <IconTerminal2 />,
     },
     {
-      title: "Ease of use",
+      title: "Branding & Creative Design",
       description:
         "It's as easy as using an Apple, and as expensive as buying one.",
       icon: <IconEaseInOut />,
     },
     {
-      title: "Pricing like no other",
+      title: "Digital Marketing & Advertising",
       description:
         "Our prices are best in the market. No cap, no lock, no credit card required.",
       icon: <IconCurrencyDollar />,
     },
     {
-      title: "100% Uptime guarantee",
+      title: " Media Planning & Promotion",
       description: "We just cannot be taken down by anyone.",
       icon: <IconCloud />,
     },
     {
-      title: "Multi-tenant Architecture",
+      title: "Website & App Solutions",
       description: "You can simply share passwords instead of buying new seats",
       icon: <IconRouteAltLeft />,
     },
     {
-      title: "24/7 Customer Support",
+      title: "Event Management & Production",
       description:
         "We are available a 100% of the time. Atleast our AI Agents are.",
       icon: <IconHelp />,
     },
     {
-      title: "Money back guarantee",
+      title: " Broadcast & Channel Setup",
       description:
         "If you donot like EveryAI, we will convince you to like us.",
       icon: <IconAdjustmentsBolt />,
     },
     {
-      title: "And everything else",
+      title: "Global Distribution & Expansion",
       description: "I just ran out of copy ideas. Accept my sincere apologies",
       icon: <IconHeart />,
     },

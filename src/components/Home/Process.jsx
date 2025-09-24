@@ -1,8 +1,8 @@
 import React from 'react'
-import { Timeline } from './ui/timeline'
-import S1 from '../assets/images/process/journey.png'
-import S2 from '../assets/images/process/strategy.png'
-import S3 from '../assets/images/process/understanding.png'
+import { Timeline } from '../ui/timeline'
+import S1 from '../../assets/images/process/journey.png'
+import S2 from '../../assets/images/process/strategy.png'
+import S3 from '../../assets/images/process/understanding.png'
 
 
 const Process = () => {
