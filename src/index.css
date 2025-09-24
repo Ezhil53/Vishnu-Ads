@@ -141,7 +141,7 @@ footer{
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-image: url('./assets/images/2105.jpg');
+  background-image: url('./assets/images/light.jpg');
   background-size: cover;
   background-position: center;
   filter: blur(1px);
