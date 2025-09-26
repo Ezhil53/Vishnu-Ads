@@ -10,7 +10,7 @@ const Services = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.8 }}
-        className='text-5xl font-semibold text-center text-gray-600'
+        className='text-3xl md:text-5xl font-semibold text-center text-gray-600'
       >
         Our <span className='text-[#4cc1bd]'>Services</span>
       </motion.h1>
