@@ -1,80 +1,67 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import Logo from '../../assets/images/vishnu_ads_logo.png'
-import { LuAlignJustify } from 'react-icons/lu'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Logo from '../../assets/images/vishnu_ads_logo.png';
+import { LuAlignJustify } from 'react-icons/lu';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className='  w-full backdrop-blur-lg border-b-2  shadow-lg z-50    fixed  '>
-      <div className='max-w-7xl mx-auto px-6 py-3 grid grid-cols-4 '>
-        <div className='w-100 h-12 '>
-          <img src={Logo} alt='logo' className='w-ful h-full object-cover' />
-        </div>
-
-        <div className='col-span-2 flex items-center justify-center'>
-          <div className='md:hidden flex items-center justify-end w-full '>
-            <button
-              aria-label='Toggle menu'
-              onClick={() => setIsOpen(!isOpen)}
-              className='text-black focus:outline-none'
-            >
-              {isOpen ? (
-                <svg
-                  className='w-6 h-6'
-                  fill='none'
-                  stroke='currentColor'
-                  viewBox='0 0 24 24'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth={2}
-                    d='M6 18L18 6M6 6l12 12'
-                  />
-                </svg>
-              ) : (
-                <LuAlignJustify />
-              )}
-            </button>
+    <nav className="w-full backdrop-blur-lg border-b-2 shadow-lg z-50 fixed">
+      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+        {/* Row: Logo, Hamburger, Button */}
+        <div className="flex items-center w-full justify-between">
+          {/* Logo */}
+          <div className="md:h-12 h-8">
+            <img src={Logo} alt="logo" className="w-full h-full object-cover" />
           </div>
-
-          {/* Menu */}
-          <ul
-            className={`
-            md:flex md:items-center md:space-x-8 md:max-h-none md:overflow-visible
-            absolute md:static top-full left-0 w-full md:w-auto  border-b border-white/30 md:border-none 
-            transition-all duration-300 ease-in-out
-            ${isOpen ? 'max-h-96 bg-green-50' : 'max-h-0 overflow-hidden'}
-          `}
+          
+          {/* Hamburger Menu (mobile only) */}
+          <button
+            aria-label="Toggle menu"
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-black focus:outline-none mx-2"
           >
-            {[
-              { name: 'Home', li: '/' },
-              { name: 'About', li: '/about' },
-              { name: 'Services', li: '/services' },
-              { name: 'Contact', li: '/contact' }
-            ].map((item, id) => (
-              <Link
-                to={item.li}
-                key={id}
-                className='text-black/70 px-6 py-3 md:p-0 font-semibold hover:text-violet-400 cursor-pointer transition'
-              >
-                {item.name}
-              </Link>
-            ))}
-          </ul>
+            {isOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <LuAlignJustify />
+            )}
+          </button>
+          
         </div>
 
-        <div className='flex items-center justify-end '>
-          <button className='w-fit bg-violet-500 hover:bg-pink-600 transition text-white md:font-semibold py-2 md:px-5 px-2 rounded-lg shadow-md'>
+        {/* Menu links (desktop: row, mobile: dropdown) */}
+        <ul
+          className={`md:flex md:items-center md:space-x-8 absolute md:static top-16 left-0 w-full md:w-auto bg-green-50 md:bg-transparent transition-all duration-300
+            ${isOpen ? 'flex flex-col max-h-96' : 'max-h-0 overflow-hidden md:max-h-none md:overflow-visible'}`}
+        >
+          {[
+            { name: 'Home', li: '/' },
+            { name: 'About', li: '/about' },
+            { name: 'Services', li: '/services' },
+            { name: 'Contact', li: '/contact' }
+          ].map((item, id) => (
+            <Link
+              to={item.li}
+              key={id}
+              className="text-black/70 px-6 py-3 md:px-2 md:py-1 rounded-sm font-semibold hover:bg-white/90 hover:text-violet-500  cursor-pointer transition"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </ul>
+
+        {/* <button className="w-fit bg-violet-500 hover:bg-pink-600 transition text-white md:font-semibold py-2 md:px-5 px-2 rounded-lg shadow-md ml-2">
             Get Quote
-          </button>
-        </div>
+          </button> */}
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
