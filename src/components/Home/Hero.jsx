@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import Navbar from './Navbar'
 import { LayoutTextFlip } from '@/components/ui/layout-text-flip'
 import { motion, AnimatePresence, useInView } from 'framer-motion'
-import { LuArrowRight} from 'react-icons/lu'
+import { LuArrowRight } from 'react-icons/lu'
 import Bg from '../../assets/images/bg-pattern.png'
 import Bg1 from '../../assets/images/hero-bg.png'
 import Bg2 from '../../assets/images/hero-bg2.png'
@@ -29,10 +29,10 @@ const Hero = () => {
       <Navbar />
 
       <section className='relative min-h-screen ' id='hero' ref={ref}>
-        <AnimatePresence mode='wait' >
+        <AnimatePresence mode='wait'>
           {isInView && (
             <motion.div
-              key="hero-component"
+              key='hero-component'
               className='max-w-6xl mx-auto flex flex-col justify-center items-center h-screen px-4 md:px-0 '
               variants={containerVariants}
               initial='hidden'
@@ -53,9 +53,9 @@ const Hero = () => {
                 <LayoutTextFlip
                   text='The Next Era of'
                   words={[
-                    'Advertisement',
+                    'Ads',
                     'Branding',
-                    'Designing',
+                    'Design',
                     'Marketing'
                   ]}
                 />
@@ -70,9 +70,12 @@ const Hero = () => {
                 reiciendis ab quis. Eos, corporis qui?
               </motion.p>
 
-              <motion.div className='flex mt-5 z-10' variants={itemVariants}>
-                <button className='bg-white flex items-center gap-4 text-[#2dd5d0] px-4 py-2 shadow-lg  rounded-4xl hover:bg-[#2dd5d0]/20 transition'>
-                  Enquiry <LuArrowRight/>
+              <motion.div className='flex mt-5 z-10 gap-8' variants={itemVariants}>
+                <button className='bg-white/70  flex items-center gap-4 text-[#3dc2be] px-4 py-2 shadow-lg  rounded-4xl hover:bg-[#2dd5d0]/20 transition'>
+                  Enquiry <LuArrowRight />
+                </button>
+                <button className='w-fit bg-white/70  hover:bg-violet-200 transition text-violet-500  py-2 md:px-5 px-4 rounded-4xl shadow-lg ml-2'>
+                  Get Quote
                 </button>
               </motion.div>
             </motion.div>
