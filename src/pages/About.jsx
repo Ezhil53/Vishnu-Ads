@@ -3,21 +3,8 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Navbar from '../components/Home/Navbar'
 import Footer from '../components/Home/Footer'
-import {
-  Rocket,
-  Target,
-  Users,
-  Globe,
-  Smartphone,
-  ShoppingCart,
-  TrendingUp,
-  Award,
-  CheckCircle,
-  ArrowRight,
-  Zap,
-  Heart,
-  Star
-} from 'lucide-react'
+import { Rocket, Target, Users, Globe, Smartphone, ShoppingCart, TrendingUp, Award, CheckCircle, ArrowRight, Zap, Heart, Star} from 'lucide-react'
+import Cursor from '../components/ui/smoothFollower'
 
 const About = () => {
   const [activeService, setActiveService] = useState(0)
@@ -145,14 +132,9 @@ const About = () => {
   return (
     <>
       <Navbar />
+       <Cursor/>
       <div className='min-h-screen bg-gradient-to-br from-purple-100 via-white to-green-100 relative overflow-hidden'>
-        {/* Background Elements */}
-        {/* <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-2000"></div>
-      </div> */}
-
+    
         {/* Hero Section */}
         <section ref={heroRef} className='relative px-4 py-20 lg:py-32'>
           <div className='max-w-7xl mx-auto'>
@@ -225,7 +207,7 @@ const About = () => {
                   initial={{ opacity: 0, y: 50 }}
                   animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }}
-                  className='flex items-center justify-center gap-8 mx-auto backdrop-blur-xl bg-white/10 rounded-2xl p-6 border border-black/20 hover:bg-white/20 transition-all duration-300 group cursor-pointer w-80'
+                  className='flex items-center justify-center gap-8 mx-auto backdrop-blur-xl bg-white/50 rounded-2xl p-6 border-2 border-white  hover:shadow-xl hover:scale-110 transition-all duration-300 group cursor-pointer w-80'
                 >
                   <div className='text-green-600/80 mb-4 scale-150 transition-transform'>
                     {item.icon}
@@ -413,9 +395,7 @@ const About = () => {
                   Our Success
                 </span>
               </h2>
-              {/* <p className="text-xl text-gray-500 max-w-3xl mx-auto">
-              Our core values shape every strategy, every campaign, and every relationship we build.
-            </p> */}
+              
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
@@ -452,7 +432,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className='backdrop-blur-xl bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-3xl p-12 border border-white/20'
+              className='backdrop-blur-xl bg-white/40 rounded-3xl p-12 border-2 border-white'
             >
               <h2 className='text-4xl lg:text-5xl font-bold text-gray-700 mb-6'>
                 Ready to Build Your Empire?
@@ -461,12 +441,12 @@ const About = () => {
                 Join the brands that chose growth over mediocrity. Let's create
                 something extraordinary together.
               </p>
-              <button className='group relative bg-white hover:from-cyan-200 hover:to-purple-400 text-gray-500 font-semibold py-4 px-12 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>
+              <button className='group relative bg-gradient-to-r from-cyan-200 to-purple-200 shadow-lg flex items-center gap-4 text-gray-700 font-semibold py-4 px-12 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl mx-auto border-2'>
                 <span className='relative z-10 flex items-center gap-2'>
                   Let's Get Started
                   <Rocket className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
                 </span>
-                <div className='absolute inset-0 bg-gradient-to-r from-cyan-200 to-purple-200 rounded-full blur opacity-0 group-hover:opacity-30 transition-opacity'></div>
+                <div className='absolute inset-0 bg-gradient-to-r from-cyan-200 to-purple-200 rounded-full blur opacity-0 group-hover:opacity-70 transition-opacity'></div>
               </button>
             </motion.div>
           </div>
