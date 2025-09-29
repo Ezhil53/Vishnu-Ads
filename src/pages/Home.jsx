@@ -7,6 +7,8 @@ import About from '../components/Home/About'
 import Clients from '../components/Home/Clients'
 import Footer from '../components/Home/Footer'
 import ProTime from '../components/Home/ProTime'
+import Dummy from '../components/Home/Dummy'
+import Cursor from '../components/ui/smoothFollower'
 
 const Home = () => {
   return (
@@ -19,6 +21,9 @@ const Home = () => {
       <Clients />
       <ProTime />
       <Footer />
+      <Cursor/>
+      {/* <Dummy/> */}
+
     </>
   )
 }
