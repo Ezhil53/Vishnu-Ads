@@ -126,12 +126,13 @@
   }
 }
 
-#hero{
-   background: radial-gradient(circle at 10% 80%, #70BCBA -100%, transparent 50%), radial-gradient(circle at 100% 50%, #8B69A7 -100%, transparent 50%);
+.hero{
+   background: radial-gradient(circle at 10% 70%, #70BCBA -10%, transparent 90%), radial-gradient(circle at 100% 50%, #8B69A7 -30%, transparent 30%);
+
 }
- .services{
+ /* .services{
      background: radial-gradient(circle at 10% 10%, #70BCBA -100%, transparent 50%), radial-gradient(circle at 90% 30%, #8B69A7 -100%, transparent 40%);
-}
+} */
 
 footer{
   background: radial-gradient(circle at 10% 10%, #70BCBA -100%, transparent 50%), radial-gradient(circle at 90% 30%, #8B69A7 -100%, transparent 40%);
