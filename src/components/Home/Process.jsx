@@ -82,7 +82,7 @@ const Process = () => {
   ]
   return (
     <>
-      <section className='py-10 relative flex flex-col justify-center bg-gradient-to-r from-green-50 via-white to-violet-50 items-center  '>
+      <section className='py-10 relative flex flex-col justify-center  items-center  '>
         <div className='max-w-6xl bg-transparent backdrop-blur-lg'>
           <Timeline data={data} />
         </div>

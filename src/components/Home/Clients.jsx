@@ -25,10 +25,10 @@ const Clients = () => {
 
   return (
     <>
-      <section className='clients relative overflow-hidden  bg-gradient-to-r from-green-50 via-white to-violet-50'>
+      <section className='clients relative overflow-hidden '>
         <div className='  py-20 px-10 '>
          
-          <Marquee>
+          <Marquee className=''>
             {clients.map((client, id) => (
               <div
                 key={id}

@@ -11,10 +11,10 @@ const About = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-6 items-center'>
           {/* Left Text */}
           <div className='flex flex-col justify-center items-center space-y-4 p-5 rounded-lg   max-w-xs md:max-w-none'>
-            <p className='text-2xl md:text-3xl font-bold text-[#3f8d82] mb-4'>
+            <p className='text-2xl md:text-3xl font-bold text-[#3f8d82] mb-8'>
               Meet the Mind Behind the Magic
             </p>
-            <p className='text-lg text-gray-700 mb-4 text-md'>
+            <p className='text-lg text-gray-700 mb-8 text-md'>
               The spark behind our wildest ideas. If you can dream it, He can
               make it happen.
             </p>

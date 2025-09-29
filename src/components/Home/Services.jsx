@@ -5,6 +5,8 @@ import { motion } from 'framer-motion'
 const Services = () => {
   return (
     <section className='services relative min-h-screen py-10'>
+      <div className="h-60 w-60 rounded-full bg-[#aceee3dc] top-30 left-20 blur-[60px] -z-0 absolute"></div>
+        <div className="h-100 w-150 rounded-full  bg-[#daa2ea97]  top-70 right-20 blur-[90px] -z-0 absolute"></div>
       <motion.h1
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -14,7 +16,7 @@ const Services = () => {
       >
         Our <span className='text-[#4cc1bd]'>Services</span>
       </motion.h1>
-      <motion.div className='py-10 relative flex justify-center items-center max-w-6xl mx-auto'
+      <motion.div className='py-10 relative flex justify-center items-center max-w-6xl mx-auto bg-white/50'
       initial={{opacity: 0, y: 100}}
         whileInView={{opacity:1, y:0 }} 
         transition= { {duration: 2, ease: 'easeOut' }}  

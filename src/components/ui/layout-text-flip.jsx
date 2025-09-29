@@ -22,12 +22,12 @@ export const LayoutTextFlip = ({
     <>
       <motion.span
         layoutId="subtext"
-        className="text-2xl font-bold tracking-tight  md:text-5xl">
+        className="text-2xl font-bold tracking-tight  md:text-4xl">
         {text}
       </motion.span>
       <motion.span
         layout
-        className="relative w-fit overflow-hidden rounded-md border border-transparent bg-white/50 px-4 py-2 font-sans  font-bold tracking-tight text-[#8550b0]   ring ring-black/10 md:text-5xl text-2xl">
+        className="relative w-fit overflow-hidden rounded-md border border-transparent bg-white px-4 py-2 font-sans  font-bold tracking-tight text-[#8550b0]   ring ring-black/10 md:text-4xl text-2xl">
         <AnimatePresence mode="popLayout">
           <motion.span
             key={currentIndex}
