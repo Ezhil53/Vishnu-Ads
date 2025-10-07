@@ -7,22 +7,28 @@ import About from '../components/Home/About'
 import Clients from '../components/Home/Clients'
 import Footer from '../components/Home/Footer'
 import ProTime from '../components/Home/ProTime'
-import Dummy from '../components/Home/Dummy'
+import Dummy from '../components/Home/HeroSec'
 import Cursor from '../components/ui/smoothFollower'
+import S2 from '../components/Home/Ser'
+
+
 
 const Home = () => {
   return (
     <>
-      <Hero />
+    <Dummy/>
+      {/* <Hero /> */}
       <Services />
       <Stats />
       <About />
-      <Process />
-      <Clients />
       <ProTime />
+      <Process />
+      <S2/>
+      <Clients />
+     
       <Footer />
-      <Cursor/>
-      {/* <Dummy/> */}
+      {/* <Cursor/> */}
+      
 
     </>
   )
