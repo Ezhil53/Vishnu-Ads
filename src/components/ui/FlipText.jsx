@@ -3,8 +3,8 @@ import { motion } from 'framer-motion'
 
 const FlipText = ({ children, href }) => {
 
-  const DURATION = 0.35
-  const STAGGER = 0.050
+  const DURATION = 0.25
+  const STAGGER = 0.025
 
   return (
     <motion.a
