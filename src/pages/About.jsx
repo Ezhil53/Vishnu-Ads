@@ -6,6 +6,7 @@ import Footer from '../components/Home/Footer'
 import { Rocket, Target, Users, Globe, Smartphone, ShoppingCart, TrendingUp, Award, CheckCircle, ArrowRight, Zap, Heart, Star} from 'lucide-react'
 import Cursor from '../components/ui/smoothFollower'
 
+
 const About = () => {
   const [activeService, setActiveService] = useState(0)
   const heroRef = useRef(null)

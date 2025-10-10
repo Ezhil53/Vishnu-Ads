@@ -52,7 +52,8 @@ const Navbar = () => {
             { name: 'Home', li: '/' },
             { name: 'About', li: '/about' },
             { name: 'Services', li: '/services' },
-            { name: 'Contact', li: '/contact' }
+            { name: 'Contact', li: '/contact' },
+            { name: 'Career', li: '/career' }
           ].map((item, id) => (
             <FlipText
               href={item.li}

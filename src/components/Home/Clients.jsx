@@ -28,7 +28,7 @@ const Clients = () => {
       <section className='clients relative overflow-hidden '>
         <div className='  py-20 px-10 '>
          
-          <Marquee className=''>
+          <Marquee >
             {clients.map((client, id) => (
               <div
                 key={id}

@@ -104,15 +104,7 @@ const MarqueeText = ({ inView }) => {
         </div>
       </motion.div>
     </div>
-    // <>
-    //   <Marquee>
-    //     <div className='flex items-center gap-4 sm:gap-6 md:gap-8 text-2xl sm:text-3xl md:text-5xl font-bold text-black'>
-    //       <div className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-red-500/50 rounded-lg'></div>
-    //       <h1 className='opacity-20'>Our Services </h1>
-    //       <div className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-500/50 rounded-lg'></div>
-    //     </div>
-    //   </Marquee>
-    // </>
+   
   )
 }
 
@@ -162,7 +154,6 @@ export default function App () {
         </span>
       </div> */}
     
-
       {/* Marquee header */}
       <div className='relative z-10'>
         <MarqueeText inView={isInView} />

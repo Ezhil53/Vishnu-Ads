@@ -18,7 +18,7 @@ const HeroSec = () => {
   return (
     <ParallaxProvider>
       <Navbar />
-      <div className='relative min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 overflow-hidden'>
+      <div className='relative min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-green-50 overflow-hidden'>
         {/* Main Content */}
         <motion.div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 lg:pt-32 lg:pb-24'
         initial={{ opacity: 0 }}
@@ -30,23 +30,15 @@ const HeroSec = () => {
             <Parallax speed={5} className='col-span-2'>
               <div className='space-y-8 '>
                 {/* Badge */}
-                <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white/40 shadow-lg'>
+                <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-lg border-2 border-white '>
                   <Sparkles className='w-4 h-4 text-purple-600' />
                   <span className='text-sm font-semibold text-gray-700'>
                     Your Complete Growth Partner 
                   </span>
                 </div>
 
-                {/* Main Heading */}
-                {/* <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                  <span className="block text-gray-900">Transform Your </span>
-                  <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                    Brand Vision
-                  </span>
-                  <span className="block text-gray-900">Into Reality</span>
-                </h1> */}
                 <Parallax speed={10}>
-                  <h1 className='text-3xl sm:text-4xl lg:text-5xl text-gray-600 font-bold my-3 z-10'>
+                  <h1 className='text-2xl sm:text-4xl lg:text-5xl text-gray-600 font-bold my-3 z-10'>
                     We <span className='text-[#2dd5d0]'> Create</span>{' '}
                     Experiences{' '}
                   </h1>
@@ -65,7 +57,7 @@ const HeroSec = () => {
 
                   {/* Subheading */}
 
-                  <p className='text-lg sm:text-xl text-gray-600 leading-relaxed max-w-xl'>
+                  <p className='text-md sm:text-xl text-gray-600 leading-relaxed max-w-xl'>
                     From registration to rocket launch. We provide end-to-end
                     marketing solutions that turn startups into industry
                     leaders.
@@ -73,7 +65,7 @@ const HeroSec = () => {
                 </Parallax>
                 {/* CTA Buttons */}
                 <div className='flex flex-col sm:flex-row gap-4'>
-                  <button className='group relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden'>
+                  <button className='group relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden '>
                     <span className='relative z-10 flex items-center justify-center gap-2'>
                       Get Started Free
                       <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
@@ -89,8 +81,8 @@ const HeroSec = () => {
                 {/* Trust Indicators */}
                 <div className='flex flex-wrap items-center gap-8 pt-4'>
                   <div className='flex items-center gap-2'>
-                    <div className='flex -space-x-2'>
-                      {[1, 2, 3, 4].map(i => (
+                    <div className=' -space-x-2 hidden sm:flex'>
+                      {[1, 2, 3].map(i => (
                         <div
                           key={i}
                           className='w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-purple-400 border-2 border-white'
@@ -106,8 +98,8 @@ const HeroSec = () => {
                   <div className='h-12 w-px bg-gray-300'></div>
 
                   <div className='flex items-center gap-2'>
-                    <div className='flex gap-1'>
-                      {[1, 2, 3, 4, 5].map(i => (
+                    <div className='sm:flex hidden gap-1'>
+                      {[1, 2, 3].map(i => (
                         <Award
                           key={i}
                           className='w-5 h-5 text-yellow-500 fill-yellow-500'
@@ -179,44 +171,7 @@ const HeroSec = () => {
               </Parallax>
             </div>
           </div>
-
-          {/* Services Strip */}
-          {/* <Parallax speed={3}>
-            <div className='mt-16 lg:mt-24'>
-              <div className='  rounded-3xl p-6 '>
-                <div className='flex flex-wrap justify-center lg:justify-around items-center gap-6'>
-                  {services.map((service, index) => (
-                    <div
-                      key={index}
-                      className='flex items-center gap-3 px-4 py-2 rounded-xl bg-white/60 backdrop-blur-sm border border-white/60 hover:bg-white/80 transition-all duration-300 transform hover:scale-105 cursor-pointer'
-                    >
-                      <div className='p-2 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg text-white'>
-                        {service.icon}
-                      </div>
-                      <span className='font-semibold text-gray-700 text-sm lg:text-base'>
-                        {service.text}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </Parallax> */}
         </motion.div>
-
-        {/* Scroll Indicator */}
-        {/* <Parallax speed={5}>
-          <div className='absolute bottom-8 left-1/2 transform -translate-x-1/2'>
-            <div className='flex flex-col items-center gap-2'>
-              <p className='text-sm text-gray-600 font-medium'>
-                Scroll to explore
-              </p>
-              <div className='w-6 h-10 rounded-full border-2 border-gray-400 flex items-start justify-center p-2'>
-                <div className='w-1.5 h-3 bg-gray-600 rounded-full'></div>
-              </div>
-            </div>
-          </div>
-        </Parallax> */}
       </div>
     </ParallaxProvider>
   )

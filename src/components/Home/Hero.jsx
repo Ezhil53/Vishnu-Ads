@@ -3,9 +3,8 @@ import Navbar from './Navbar'
 import { LayoutTextFlip } from '@/components/ui/layout-text-flip'
 import { motion, AnimatePresence, useInView } from 'framer-motion'
 import { LuArrowRight, LuZap } from 'react-icons/lu'
-import Bg from '../../assets/images/bg-pattern.png'
 import Bg1 from '../../assets/images/hero-bg.png'
-import Bg2 from '../../assets/images/float1.png'
+
 
 
 const containerVariants = {

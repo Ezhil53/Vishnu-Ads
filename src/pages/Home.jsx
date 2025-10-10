@@ -10,26 +10,26 @@ import ProTime from '../components/Home/ProTime'
 import Dummy from '../components/Home/HeroSec'
 import Cursor from '../components/ui/smoothFollower'
 import S2 from '../components/Home/Ser'
-
+import Sticky from '../components/Home/Sticky'
+import Try from '../components/Try'
 
 
 const Home = () => {
   return (
     <>
-    <Dummy/>
+    {/* <Try/> */}
+      <Dummy/>
       {/* <Hero /> */}
-      <Services />
       <Stats />
       <About />
+      <Services />
+      <Sticky/>
       <ProTime />
       <Process />
       <S2/>
       <Clients />
-     
       <Footer />
-      {/* <Cursor/> */}
-      
-
+      <Cursor/>
     </>
   )
 }
