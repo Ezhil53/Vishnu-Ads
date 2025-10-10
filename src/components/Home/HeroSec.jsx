@@ -4,7 +4,7 @@ import Bg1 from '../../assets/images/hero-bg.png'
 import { LayoutTextFlip } from '@/components/ui/layout-text-flip'
 import { motion } from 'framer-motion'
 import Navbar from './Navbar'
-import { Rocket, Users, ArrowRight, Sparkles, Target, Globe, Award, BarChart } from 'lucide-react'
+import { Rocket, Users, ArrowRight, Sparkles, Target, Globe, Award, BarChart, Star } from 'lucide-react'
 
 const HeroSec = () => {
   const services = [
@@ -79,7 +79,7 @@ const HeroSec = () => {
                 </div>
 
                 {/* Trust Indicators */}
-                <div className='flex flex-wrap items-center gap-8 pt-4'>
+                <div className='flex flex-wrap items-center justify-center gap-8 pt-4'>
                   <div className='flex items-center gap-2'>
                     <div className=' -space-x-2 hidden sm:flex'>
                       {[1, 2, 3].map(i => (
@@ -107,8 +107,8 @@ const HeroSec = () => {
                       ))}
                     </div>
                     <div className='text-sm'>
-                      <p className='font-semibold text-gray-900'>
-                        4.9/5 Rating
+                      <p className='font-semibold text-gray-900 flex gap-3 items-center'>
+                        4.9/5 <Star size={14} className='text-yellow-500 fill-yellow-500'/>
                       </p>
                       <p className='text-gray-600'>Client reviews</p>
                     </div>
