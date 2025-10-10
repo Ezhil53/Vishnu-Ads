@@ -19,7 +19,7 @@ const HorizontalScrollCarousel = () => {
   const { scrollYProgress } = useScroll({
     target: targetRef
   })
-  const x = useTransform(scrollYProgress, [0, 1], ['50%', '-105%'])
+  const x = useTransform(scrollYProgress, [0, 1], ['90%', '-105%'])
 
   const introOpacity = useTransform( scrollYProgress, [0, 0.12, 0.22], [1, 0.3, 0])
   const introY = useTransform(scrollYProgress, [0, 0.1], [0, -280])
@@ -169,6 +169,14 @@ const MobileCard = ({ card, index }) => {
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className='relative h-[300px] overflow-hidden bg-neutral-200 rounded-3xl'
     >
+       <div
+        style={{
+          backgroundImage: `url(${card.url})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+        className='absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110'
+      ></div>
       <div className='absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-5'></div>
       <div className='absolute inset-0 z-10 flex flex-col justify-end p-6'>
         <motion.div
